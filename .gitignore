@@ -1,0 +1,13 @@
+/.idea/
+/build/
+/venv/
+/.ba/
+/.gradle/
+
+**/__pycache__
+**/migrations/
+**/*.sqlite
+**/logs
+
+*.tar
+/.vscode/
