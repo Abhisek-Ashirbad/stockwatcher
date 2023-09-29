@@ -7,5 +7,11 @@
 # =============================================================================
 
 # Imports
-from .main_cfg import HOST, PORT
-from .version_cfg import VERSION
+from pydantic import BaseModel
+from financial import Financial
+
+class Stock(BaseModel):
+    financial: Financial
+
+    def __init__(self, financial: Financial):
+        self.financial = financial

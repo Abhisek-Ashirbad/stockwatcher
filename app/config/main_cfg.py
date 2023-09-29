@@ -7,5 +7,10 @@
 # =============================================================================
 
 # Imports
-from .main_cfg import HOST, PORT
-from .version_cfg import VERSION
+from dotenv import load_dotenv
+import os
+
+#Load the environment variables from .env file.
+load_dotenv()
+HOST = os.getenv("MICROSERVICE_HOST")
+PORT = int(os.getenv("MICROSERVICE_PORT"))
