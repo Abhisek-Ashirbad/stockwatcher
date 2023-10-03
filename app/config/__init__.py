@@ -7,5 +7,5 @@
 # =============================================================================
 
 # Imports
-from .main_cfg import HOST, PORT
+from .main_cfg import HOST, PORT, LOG_LEVEL
 from .version_cfg import VERSION

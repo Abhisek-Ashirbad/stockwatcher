@@ -11,7 +11,7 @@ from fastapi import FastAPI
 import asyncio
 import uvicorn
 
-from config import HOST, PORT, VERSION
+from config import HOST, PORT, VERSION, LOG_LEVEL
 
 
 # App configuration
@@ -24,7 +24,7 @@ def get_root(msg="API is working fine..."):
 
 # ASGI server configuration
 async def main():
-    config = uvicorn.Config("main:app", host=HOST, port=PORT, log_level="info", reload=True)
+    config = uvicorn.Config("main:app", host=HOST, port=PORT, log_level=LOG_LEVEL, reload=True)
     server = uvicorn.Server(config)
     await server.serve()
 

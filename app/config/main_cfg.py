@@ -14,3 +14,4 @@ import os
 load_dotenv()
 HOST = os.getenv("MICROSERVICE_HOST")
 PORT = int(os.getenv("MICROSERVICE_PORT"))
+LOG_LEVEL = os.getenv("LOG_LEVEL")
